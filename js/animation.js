@@ -15,6 +15,9 @@ const slide = function (count) {
 
 function toggle_menu() {
     $('#main-menu').slideToggle(400);
+    $('#main-menu').css({
+  'overflow':'inherit'
+});
     $('.angle').css({
         "transform": "rotate(270deg)"
     });
