@@ -1,5 +1,5 @@
 let count_val = 0;
-const slides = document.getElementsByClassName("slider-item");
+const slides = document.getElementsByClassName("slider__item");
 $(slides[count_val]).fadeIn(0);
 const slide = function (count) {
     $(slides[count_val]).fadeOut(500, () => {
@@ -16,8 +16,8 @@ const slide = function (count) {
 function toggle_menu() {
     $('#main-menu').slideToggle(400);
     $('#main-menu').css({
-  'overflow':'inherit'
-});
+        'overflow': 'inherit'
+    });
     $('.angle').css({
         "transform": "rotate(270deg)"
     });

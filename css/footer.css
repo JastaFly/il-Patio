@@ -6,7 +6,7 @@ footer {
     padding-right: 15px;
 }
 
-.footer-padding {
+.footer-block_padding {
     padding-left: 130px;
 }
 
@@ -22,38 +22,41 @@ footer {
     display: none;
 }
 
-.contact-group {
+.footer-block__group {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 60px;
 }
 
-.foter-icon {
+.footer-block__contact-icon {
     height: 20px;
     width: 20px;
     margin-right: 25px;
 }
 
-.span-text {
+.footer-block__item_block {
+    display: block;
+    margin-top: 20px;
+}
+
+.footer-block__text {
     color: white;
-    font-family: IntroBoldCaps;
-    font-size: 15px;
+    font-family: IntroHeadR;
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 35px;
 }
 
 .white-text {
     color: white;
-    font-family: IntroBoldCaps;
-    font-size: 15px;
-    display: block;
-    margin-top: 20px;
 }
 
 .white-text:hover {
     color: white;
 }
 
-.social-icon {
+.social__icon {
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 18px;
@@ -62,11 +65,14 @@ footer {
     margin-left: 25px;
 }
 
-.white-link {
-    text-decoration: underline;
+.footer-block__item {
     font-family: IntroBoldCaps;
     color: white;
     font-size: 15px;
+}
+
+.footer-block__item_underline {
+    text-decoration: underline;
 }
 
 .facebook {
@@ -77,7 +83,8 @@ footer {
 .facebook:hover {
     background: url(../img/facebook-hov.png) no-repeat;
 }
-.social-group {
+
+.social {
     margin-top: 30px;
 }
 
@@ -105,39 +112,33 @@ footer {
     background: url(../img/insta-hov.png) no-repeat;
 }
 
-.gray-title {
+.footer-block__title {
     font-family: IntroBoldCaps;
     color: #575755;
     font-size: 18px;
     display: block;
     margin-bottom: 30px;
 }
-.yellow-text {
+
+.footer-block__item_yellow {
     color: #fbb014;
 }
 
-.yellow-text:hover {
+.footer-block__item_yellow:hover {
     color: #fbb014;
+}
+
+.footer-block__item_indent {
+    text-align: start;
 }
 
 @media screen and (max-width: 468px) {
-    .footer-padding {
+
+    .footer-block__white-logo {
         display: none;
     }
 
-    .white-logo {
-        display: none;
-    }
-
-    .mini-text {
-        display: none;
-    }
-
-    .gray-title {
-        display: none;
-    }
-
-    .contact-none {
+    .footer-block__text {
         display: none;
     }
 
@@ -151,11 +152,15 @@ footer {
         font-size: 20px;
     }
 
-    .white-text {
+    .footer-block__item {
+        font-size: 20px;
+    }
+
+    .footer-block {
         display: none;
     }
 
-    .white-link {
-        font-size: 20px;
+    .footer-block_show {
+        display: block;
     }
 }

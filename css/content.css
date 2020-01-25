@@ -27,52 +27,9 @@ a:hover {
     color: white;
 }
 
-.header-wrap {
-    display: flex;
-    justify-content: center;
-}
-
 .content-wrap {
     width: 1200px;
 }
-
-.red-button {
-    background-color: #a80d26;
-    border-radius: 20px;
-    color: white;
-    font-family: IntroBoldCaps;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: pointer;
-    border: 4px solid #a80d26;
-    transition: 0.4s;
-    display: flex;
-    align-content: center;
-}
-
-.mar-bottom {
-    margin-bottom: 115px;
-}
-
-.red-button:hover {
-    background-color: white;
-    border: 4px solid #a80d26;
-    color: #a80d26;
-}
-
-.red-button:hover .call-image {
-    background: url(../img/call-hov.png) no-repeat;
-}
-
-.call-image {
-    padding-left: 20px;
-    padding-top: 10px;
-    margin-right: 10px;
-    background: url(../img/call.png) no-repeat;
-}
-
 
 menu {
     list-style-type: none;
@@ -89,7 +46,7 @@ menu {
     margin-left: 10px;
 }
 
-.slider-item {
+.slider__item {
     width: 100%;
     height: 100%;
     padding-top: 70px;
@@ -111,12 +68,12 @@ menu {
     height: 604px;
 }
 
-.slide-title {
+.slider__title {
     color: white;
     font-size: 42px;
 }
 
-.slide-text {
+.slider__text {
     color: white;
     font-family: IntroHeadR;
     font-size: 20px;
@@ -125,12 +82,12 @@ menu {
     margin-bottom: 50px;
 }
 
-.slide-content {
+.slider__content {
     width: 550px;
     margin-left: 10%;
 }
 
-.yellow-button {
+.slider__yellow-button {
     background-color: #fbc554;
     border: 4px solid #fbc554;
     color: black;
@@ -144,12 +101,12 @@ menu {
     transition: 0.4s;
 }
 
-.yellow-button:hover {
+.slider__yellow-button:hover {
     background-color: rgb(0%, 0%, 0%, 0);
     color: #fbc554;
 }
 
-.slide-button {
+.slider__button {
     height: 30px;
     width: 30px;
     border-radius: 20px;
@@ -160,7 +117,7 @@ menu {
     z-index: 2;
 }
 
-.slide-button:hover {
+.slider__button:hover {
     background-color: #fbc554;
 }
 
@@ -190,25 +147,25 @@ menu {
     background: url(../img/pizza.jpg) no-repeat;
 }
 
-.show {
+.slider__item_show {
     display: block;
 }
 
-.main-text {
+.text-block__text {
     font-family: IntroHeadR;
     font-size: 22px;
     text-align: justify;
     margin-top: 50px;
-    width: 600px;
+    width: 100%;
 }
 
-.red-sqad {
+.sqad__red-sqad {
     background-color: #a80d26;
     width: 530px;
     height: 335px;
 }
 
-.sqad {
+.sqad__image {
     position: absolute;
     margin-top: -315px;
     margin-left: 20px;
@@ -220,18 +177,18 @@ menu {
     justify-content: center;
 }
 
-.sqad-group {
+.sqad {
     margin-top: 50px;
 }
 
-.card {
+.event {
     margin-top: 60px;
     box-shadow: 0.6em 0.6em 10px rgba(122, 122, 122, 0.5);
     padding-bottom: 35px;
     transition: 0.4s;
 }
 
-.card:hover {
+.event:hover {
     transform: translate(-20px, -20px);
     box-shadow: 1em 1em 14px rgba(122, 122, 122, 0.5);
 }
@@ -240,32 +197,32 @@ menu {
     margin-left: 20px;
 }
 
-.mini-title {
+.event__title {
     font-family: IntroBoldCaps;
     color: #a80d26;
     font-size: 18px;
 }
 
-.date {
+.event__date {
     color: #858585;
     font-family: IntroBoldCaps;
     font-size: 13px;
 }
 
-.card-text {
+.event__text {
     font-family: IntroHeadR;
     font-size: 16px;
     text-align: justify;
     margin-top: 20px;
 }
 
-.text-group {
+.event__group {
     margin-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.card-button {
+.event__button {
     background-color: #fbc554;
     color: black;
     border-radius: 30px;
@@ -280,13 +237,9 @@ menu {
     text-align: center;
 }
 
-.card-button:hover {
+.event__button:hover {
     color: black;
     background-color: #fbb014;
-}
-
-.white-number {
-    color: white;
 }
 
 .margin-bottom {
@@ -430,9 +383,31 @@ h1 {
     padding-left: 0px !important;
 }
 
+.info__item_flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info__text_font-size-22 {
+    font-size: 22px;
+}
+
+.info__text_font-size-30 {
+    font-size: 30px;
+}
+
+.info_margin {
+    margin-top: 55px;
+    margin-bottom: 90px;
+}
+
+.info__item_margin-top {
+    margin-top: 30px;
+}
+
 @media screen and (max-width: 468px) {
-    .red-button {
-        display: none;
+    .info_blok {
+        display: block !important;
     }
 
     header {
@@ -467,41 +442,26 @@ h1 {
         width: 97% !important;
     }
 
-    .inner-item {
-        padding-bottom: 10px;
-        padding-top: 10px;
-        border-top-style: solid;
-        border-top-width: 1px;
-        border-top-color: white;
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-        border-bottom-color: black;
-    }
-
-    .inner-item a {
-        text-align: start;
-    }
-
     .menu-link {
         line-height: 30px;
         padding-top: -10px;
     }
 
 
-    .slide-content {
+    .slider__content {
         width: 95%;
         margin-left: 0px;
         padding-left: 20px;
         margin-right: 0px;
     }
 
-    .slide-text {
+    .slider__text {
         width: 100%;
         margin-right: 0px;
         padding-right: 0px;
     }
 
-    .slider-item {
+    .slider__item {
         padding-top: 90px;
     }
 
@@ -510,7 +470,7 @@ h1 {
         background-position: 16px 14px;
     }
 
-    .slide-button {
+    .slider__button {
         height: 50px;
         width: 50px;
         border-radius: 30px;
@@ -527,8 +487,7 @@ h1 {
         margin-top: 60px;
     }
 
-    .main-text {
-        width: 100%;
+    .text-block__text {
         margin-top: 30px;
     }
 
@@ -541,11 +500,11 @@ h1 {
         padding-right: 0px;
     }
 
-    .red-sqad {
+    .sqad__red-sqad {
         display: none;
     }
 
-    .sqad {
+    .sqad__image {
         position: static;
         margin-top: 0px;
         width: 100%;
@@ -553,11 +512,11 @@ h1 {
         margin-bottom: 80px;
     }
 
-    .sqad-group {
+    .sqad {
         margin-top: 0px;
     }
 
-    .card {
+    .event {
         margin-top: 25px;
     }
 
