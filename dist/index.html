@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/animation.js"></script>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="top top_black-background">
+        <div class="info info_show info_flex">
+            <span class="info__text red-text">Бронирование стола</span>
+            <span class="info__text info__text_bold info__text_white">25-15-25</span>
+            <span class="info__text red-text">Служба доставки</span>
+            <span class="info__text info__text_bold info__text_white">210-210</span>
+
+        </div>
+    </div>
+    <div class="center-wrap">
+        <header>
+            <div id="toggle" onclick="toggle_menu()">
+                <input type="checkbox" />
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+            </div>
+            <a href="" class="logo">
+                <img src="img/logo.jpg" alt="" class="logo__img">
+            </a>
+            <img src="img/clock.svg" alt="" class="icon">
+            <div class="info">
+                <span class="info__text">Время работы <br /> ресторана</span>
+                <br />
+                <div class="info__item">
+                    <span class="info__text info__text_bold">ПН-ЧТ.ВС <span class="red-text">11.00 - 23.00</span></span>
+                    <br />
+                    <span class="info__text info__text_bold">ПТ-СБ <span class="red-text">11.00 - 01.00</span></span>
+                </div>
+            </div>
+            <div class="info">
+                <span class="info__text">Заказы на доставку <br /> принимаются</span>
+                <br />
+                <div class="info__item">
+                    <span class="info__text info__text_bold">ПН-ЧТ.ВС <span class="red-text">11.00 - 21.45</span></span>
+                    <br />
+                    <span class="info__text info__text_bold">ПТ-СБ <span class="red-text">11.00 - 23.45</span></span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info__item">
+                    <span class="info__text red-text">Бронирование</span>
+                    <br />
+                    <span class="info__text info__text_bold">25-15-25</span>
+                </div>
+                <div class="info__item">
+                    <span class="info__text red-text">Доставка</span>
+                    <br />
+                    <span class="info__text info__text_bold">210-210</span>
+                </div>
+            </div>
+
+            <div class="red-button"><span class="red-button__call"></span><span class="red-button__text">ЗАКАЗАТЬ ЗВОНОК</span></div>
+            <div class="basket">
+                <img src="img/001-commerce.svg" alt="" class="basket__img">
+                <span class="basket__count">22</span>
+            </div>
+        </header>
+    </div>
+    <div class="menu-wrap">
+        <menu id="main-menu">
+
+            <li class="menu__item"><a href="" class="menu__link_flex menu__link_main">Главная </a></li>
+
+
+            <li class="menu__item"><span class="menu__link_flex menu__link_main" onclick="show_inner(this)">Меню ресторана <img src="img/angle.png" class="angle" position="0" alt=""> </span>
+                <ul class="menu__inner-list">
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-2.svg" class="menu-icon" alt="">Основное меню</a></li>
+                    <li class="menu__inner-item"> <a href="" class="menu__link_flex"><img src="img/restaurant-menu.svg" class="menu-icon" alt="">Барное меню</a></li>
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-3.svg" class="menu-icon" alt="">Специальное меню</a></li>
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/baby.svg" class="menu-icon" alt="">Детское меню</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><span class="menu__link_flex menu__link_main" onclick="show_inner(this)">Меню доставки <img src="img/angle.png" class="angle" position="0" alt=""> </span>
+                <ul class="menu__inner-list">
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-2.svg" class="menu-icon" alt="">Основное меню</a></li>
+                    <li class="menu__inner-item"> <a href="" class="menu__link_flex"><img src="img/restaurant-menu.svg" class="menu-icon" alt="">Барное меню</a></li>
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-3.svg" class="menu-icon" alt="">Специальное меню</a></li>
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/baby.svg" class="menu-icon" alt="">Детское меню</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><span class="menu__link_flex menu__link_main" onclick="show_inner(this)">Акци и события<img src="img/angle.png" class="angle" alt="" position="0"> </span>
+                <ul class="menu__inner-list">
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex">Скидки</a></li>
+                    <li class="menu__inner-item"><a href="" class="menu__link_flex">Акции по дням</a></li>
+                </ul>
+            </li>
+            <li class="menu__item "> <a href="" class="menu__link_flex menu__link_main">Доставка и оплата </a></li>
+            <li class="menu__item"><a href="" class="menu__link_flex menu__link_main">Контакты </a></li>
+            <li class="menu__item  menu__link_main">
+                <form action="" class="search search_flex">
+                    <input type="text" class="search__input" placeholder="Шо ищем???">
+                    <input type="submit" class="search__magnifer" value="">
+                </form>
+            </li>
+        </menu>
+    </div>
+    <div class="slider">
+        <div class="slider-wrap">
+            <div class="slider__button prev" onclick="slide(-1)"></div>
+            <div class="slider__item slide-1 slider__item_show">
+                <div class="slider__content"><span class="slider__title">ЗАГОЛОВОК</span>
+                    <p class="slider__text">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки новых предложений. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа форм развития. Равным образом дальнейшее развитие различных форм деятельности позволяет оценить значение модели развития.</p>
+                    <a href="#" class="slider__yellow-button">Подробнее</a>
+                </div>
+            </div>
+            <div class="slider__item slide-2">
+                <div class="slider__content"><span class="slider__title">ЗАГОЛОВОК 2</span>
+                    <p class="slider__text">Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Таким образом реализация намеченных плановых заданий требуют определения и уточнения систем массового участия. Значимость этих проблем настолько очевидна, что укрепление и развитие структуры представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+                    <a href="#" class="slider__yellow-button">Подробнее</a>
+                </div>
+            </div>
+            <div class="slider__button next" onclick="slide(1)"></div>
+        </div>
+    </div>
+    <div class="center-wrap">
+        <main>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 text-block">
+                        <h2 class="text-block__title">О компании</h2>
+                        <hr />
+                        <br />
+                        <p class="text-block__text">Идейные соображения высшего порядка, а также консультация с широким активом играет важную роль в формировании соответствующий условий активизации. Повседневная практика показывает, что новая модель организационной деятельности представляет собой интересный эксперимент проверки систем массового участия. Не следует, однако забывать, что рамки и место обучения кадров требуют определения и уточнения новых предложений. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Товарищи! укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.</p>
+                    </div>
+                    <div class="col-lg-6 center-wrap">
+                        <div class="sqad">
+                            <div class="sqad__red-sqad"></div>
+                            <img src="img/spices.jpg" alt="" class="sqad__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="margin-left">События</h2>
+            <hr />
+            <div class="container-fluid margin-top">
+                <div class="row center-wrap mar-bottom">
+                    <div class="col-lg-4">
+                        <div class="event">
+                            <img src="img/cafe.jpg" alt="" class="event__image">
+                            <div class="event__group">
+                                <span class="event__title">НАЗВАНИЕ СОБЫТИЯ</span>
+                                <br />
+                                <span class="event__date">14.04.2018</span>
+                                <p class="event__text">С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании дальнейших направлений развития.</p>
+                                <div class="center-wrap">
+                                    <a href="" class=" event__button">ЧИТАТЬ ДАЛЕЕ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="event">
+                            <img src="img/cafe.jpg" alt="" class="event__image">
+                            <div class="event__group">
+                                <span class="event__title">НАЗВАНИЕ СОБЫТИЯ</span>
+                                <br />
+                                <span class="event__date">14.04.2018</span>
+                                <p class="event__text">С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании дальнейших направлений развития.</p>
+                                <div class="center-wrap">
+                                    <a href="" class="event__button">ЧИТАТЬ ДАЛЕЕ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="event">
+                            <img src="img/cafe.jpg" alt="" class="event__image">
+                            <div class="event__group">
+                                <span class="event__title">НАЗВАНИЕ СОБЫТИЯ</span>
+                                <br />
+                                <span class="event__date">14.04.2018</span>
+                                <p class="event__text">С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании дальнейших направлений развития.</p>
+                                <div class="center-wrap">
+                                    <a href="" class=" event__button">ЧИТАТЬ ДАЛЕЕ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <menu id="bottom-menu">
+        <li class="menu__item"><a href="" class="menu__link_flex menu__link_main">Главная </a></li>
+        <li class="menu__item"><span class="menu__link_flex menu__link_main" onclick="show_inner(this)">Меню ресторана <img src="img/angle.png" class="angle rotate" position="0" alt=""> </span>
+            <ul class="menu__inner-list">
+                <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-2.svg" class="menu-icon" alt="">Основное меню</a></li>
+                <li class="menu__inner-item"> <a href="" class="menu__link_flex"><img src="img/restaurant-menu.svg" class="menu-icon" alt="">Барное меню</a></li>
+                <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-3.svg" class="menu-icon" alt="">Специальное меню</a></li>
+                <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/baby.svg" class="menu-icon" alt="">Детское меню</a></li>
+            </ul>
+        </li>
+        <li class="menu__item"><span class="menu__link_flex menu__link_main" onclick="show_inner(this)">Меню доставки <img src="img/angle.png" class="angle rotate" position="0" alt=""> </span>
+            <ul class="menu__inner-list">
+                <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-2.svg" class="menu-icon" alt="">Основное меню</a></li>
+                <li class="menu__inner-item"> <a href="" class="menu__link_flex"><img src="img/restaurant-menu.svg" class="menu-icon" alt="">Барное меню</a></li>
+                <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/restaurant-menu-3.svg" class="menu-icon" alt="">Специальное меню</a></li>
+                <li class="menu__inner-item"><a href="" class="menu__link_flex"><img src="img/baby.svg" class="menu-icon" alt="">Детское меню</a></li>
+            </ul>
+        </li>
+        <li class="menu__item"><span class="menu__link_flex menu__link_main" onclick="show_inner(this)">Акци и события<img src="img/angle.png" class="angle rotate" alt="" position="0"> </span>
+            <ul class="menu__inner-list">
+                <li class="menu__inner-item"><a href="" class="menu__link_flex">Скидки</a></li>
+                <li class="menu__inner-item"><a href="" class="menu__link_flex">Акции по дням</a></li>
+            </ul>
+        </li>
+        <li class="menu__item"> <a href="" class="menu__link_flex menu__link_main">Доставка и оплата </a></li>
+        <li class="menu__item"><a href="" class="menu__link_flex menu__link_main">Контакты </a></li>
+        <li class="menu__item  menu__link_main">
+            <form action="" class="search search_flex">
+                <input type="text" class="search__input" placeholder="Шо ищем???">
+                <input type="submit" class="search__magnifer" value="">
+            </form>
+        </li>
+    </menu>
+    <div class="info-wrap ">
+        <div class="info info_blok info_margin-top">
+            <span class="info__text">Время работы <br /> ресторана</span>
+            <br />
+            <div class="info__item info__item_margin_top">
+                <span class="info__text info__text_bold">ПН-ЧТ.ВС <span class="red-info">11.00 - 23.00</span></span>
+                <br />
+                <span class="info__text info__text_bold">ПТ-СБ <span class="red-info">11.00 - 01.00</span></span>
+            </div>
+        </div>
+        <div class="info info_blok ">
+            <span class="info__text">Заказы на доставку <br /> принимаются</span>
+            <br />
+            <div class="info__item info__item_margin_top">
+                <span class="info__text info__text_bold ">ПН-ЧТ.ВС <span class="red-info">11.00 - 21.45</span></span>
+                <br />
+                <span class="info__text info__text_bold">ПТ-СБ <span class="red-info">11.00 - 23.45</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="info info_show-block info_margin">
+        <div class="info__item info__item_flex">
+            <span class="info__text red-text info__text_font-size-22">Бронирование</span>
+            <span class="info__text info__text_bold info__text_font-size-30">25-15-25</span>
+        </div>
+        <div class="info__item info__item_flex info__item_margin-top">
+            <span class="info__text red-text info__text_font-size-22">Доставка</span>
+            <span class="info__text info__text_bold info__text_font-size-30">210-210</span>
+        </div>
+    </div>
+    <footer>
+        <div class="center-wrap">
+            <div class="footer-wrap">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 text-center footer-block footer-block footer-block_show">
+                            <img src="img/white-logo.png" alt="" class="footer-block__white-logo">
+                            <p class="footer-block__text">Не следует, однако забывать, что дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки форм развития. Задача организации, в особенности же укрепление и развитие структуры в значительной степени обуславливает создание существенных финансовых и административных условий.</p>
+
+                            <div class="footer-block footer-block_show footer-block_hidden">
+                                <div class="footer-block__group">
+                                    <img src="img/placeholder.svg" class="footer-block__contact-icon" alt="">
+
+                                    <span class="footer-block__item footer-block__item_indent">УЛ. МОСКОВКАЯ, 37<br /> ТЦ "ВЫСШАЯ ЛИГА" 4 ЭТАЖ</span>
+                                </div>
+                                <div class="footer-block__group">
+                                    <img src="img/telephone-white.svg" class="footer-block__contact-icon" alt="">
+
+                                    <span class="footer-block__item">8(964)871 99 03</span>
+                                </div>
+                                <div class="footer-block__group">
+                                    <img src="img/mail.svg" class="footer-block__contact-icon" alt="">
+
+                                    <span class="footer-block__item">PN-58@YANDEX.RU</span>
+                                </div>
+                                <span class="footer-block__item foter__text"><img src="" class="social-icon" alt=""></span>
+                                <span class="footer-block__item foter__text"><img src="" class="social-icon" alt=""></span>
+                            </div>
+                            <a href="" class="footer-block__item footer-block__item_underline">ПРОГРАММА ЛОЯЛЬНОСТИ</a>
+                            <div class="social">
+                                <a href="" class="social__icon facebook"></a>
+                                <a href="" class="social__icon twitter"></a>
+                                <a href="" class="social__icon google"></a>
+                                <a href="" class="social__icon insta"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 footer-block  footer-block_padding">
+                            <span class="footer-block__title">ОСНОВНОЕ МЕНЮ</span>
+                            <a href="" class="footer-block__item footer-block__item_block">МЕНЮ РЕСТОРАНА</a>
+                            <a href="" class="footer-block__item footer-block__item_block">МЕНЮ ДОСТАВКИ</a>
+                        </div>
+                        <div class="col-lg-3 footer-block  footer-block_padding">
+                            <span class="footer-block__title">ПОСЕТИТЕЛЯМ</span>
+                            <a href="" class="footer-block__item footer-block__item_block">ГЛАВНАЯ</a>
+                            <a href="" class="footer-block__item footer-block__item_block  footer-block__item_yellow">АКЦИИ</a>
+                            <a href="" class="footer-block__item footer-block__item_block">СОБЫТИЯ</a>
+                            <a href="" class="footer-block__item footer-block__item_block">ДОСТАВКА</a>
+                            <a href="" class="footer-block__itemt footer-block__item_block">ОПЛАТА</a>
+                        </div>
+                        <div class="col-lg-3 ">
+                            <div class="footer-block">
+                                <span class="footer-block__title">КОНТАКТЫ</span>
+                                <div class="footer-block__group">
+                                    <img src="img/placeholder.svg" class="footer-block__contact-icon" alt="">
+
+                                    <span class="footer-block__item">УЛ. МОСКОВКАЯ, 37<br /> ТЦ "ВЫСШАЯ ЛИГА" 4 ЭТАЖ</span>
+                                </div>
+                                <div class="footer-block__group">
+                                    <img src="img/telephone-white.svg" class="footer-block__contact-icon" alt="">
+
+                                    <span class="footer-block__item">8(964)871 99 03</span>
+                                </div>
+                                <div class="footer-block__group">
+                                    <img src="img/mail.svg" class="footer-block__contact-icon" alt="">
+
+                                    <span class="footer-block__item">PN-58@YANDEX.RU</span>
+                                </div>
+                                <span class="footer-block__item footer-block__item_block "><img src="" class="social-icon" alt=""></span>
+                                <span class="footer-block__item footer-block__item_block "><img src="" class="social-icon" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
